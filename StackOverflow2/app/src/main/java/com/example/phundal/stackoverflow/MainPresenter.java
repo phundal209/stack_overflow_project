@@ -50,7 +50,7 @@ public class MainPresenter implements IMainPresenter {
 
     @Override
     public void bindUserModelsToAdapter(List<UserProfileModel> userProfileModelList, RecyclerView recyclerView) {
-        UserprofileAdapter userprofileAdapter = new UserprofileAdapter(userProfileModelList, context);
+        UserProfileAdapter userprofileAdapter = new UserProfileAdapter(userProfileModelList, context);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(userprofileAdapter);

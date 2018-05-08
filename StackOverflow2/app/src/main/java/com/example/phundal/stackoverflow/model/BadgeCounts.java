@@ -8,7 +8,7 @@ import io.realm.RealmObject;
  * Created by phundal on 5/7/18.
  */
 
-public class BadeCounts extends RealmObject {
+public class BadgeCounts extends RealmObject {
     @SerializedName("bronze")
     private long bronze;
 

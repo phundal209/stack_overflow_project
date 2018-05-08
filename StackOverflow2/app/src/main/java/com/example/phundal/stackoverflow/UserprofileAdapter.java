@@ -3,7 +3,6 @@ package com.example.phundal.stackoverflow;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +19,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class UserprofileAdapter extends RecyclerView.Adapter<UserprofileAdapter.UserprofileViewHolder> {
+public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.UserprofileViewHolder> {
     private List<UserProfileModel> userProfileModels;
     private Context context;
 
-    public UserprofileAdapter(List<UserProfileModel> userProfileModels, Context context) {
+    public UserProfileAdapter(List<UserProfileModel> userProfileModels, Context context) {
         this.userProfileModels = userProfileModels;
         this.context = context;
     }
@@ -41,10 +40,10 @@ public class UserprofileAdapter extends RecyclerView.Adapter<UserprofileAdapter.
         holder.age.setText(context.getString(R.string.age, userProfileModel.getAge()));
         holder.username.setText(userProfileModel.getDisplay_name());
         holder.reputation.setText(context.getString(R.string.reputation, userProfileModel.getReputation()));
-        if (userProfileModel.getBadeCounts() != null) {
-            String bronzeString = context.getString(R.string.bronze, userProfileModel.getBadeCounts().getBronze());
-            String silverString = context.getString(R.string.silver, userProfileModel.getBadeCounts().getSilver());
-            String goldString = context.getString(R.string.gold, userProfileModel.getBadeCounts().getGold());
+        if (userProfileModel.getBadgeCounts() != null) {
+            String bronzeString = context.getString(R.string.bronze, userProfileModel.getBadgeCounts().getBronze());
+            String silverString = context.getString(R.string.silver, userProfileModel.getBadgeCounts().getSilver());
+            String goldString = context.getString(R.string.gold, userProfileModel.getBadgeCounts().getGold());
             holder.bronzeRep.setText(bronzeString);
             holder.silverRep.setText(silverString);
             holder.goldRep.setText(goldString);

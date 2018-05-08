@@ -6,7 +6,7 @@ import io.realm.RealmObject;
 
 public class UserProfileModel extends RealmObject {
     @SerializedName("badge_counts")
-    private BadeCounts badeCounts;
+    private BadgeCounts badgeCounts;
 
     @SerializedName("reputation")
     private long reputation;
@@ -23,12 +23,12 @@ public class UserProfileModel extends RealmObject {
     @SerializedName("age")
     private int age;
 
-    public BadeCounts getBadeCounts() {
-        return badeCounts;
+    public BadgeCounts getBadgeCounts() {
+        return badgeCounts;
     }
 
-    public void setBadeCounts(BadeCounts badeCounts) {
-        this.badeCounts = badeCounts;
+    public void setBadgeCounts(BadgeCounts badgeCounts) {
+        this.badgeCounts = badgeCounts;
     }
 
     public long getReputation() {
