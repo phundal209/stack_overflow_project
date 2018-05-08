@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">StackOverflow</string>
+    <string name="welcome_to_stack_overflow">Welcome to StackOverflow!</string>
+    <string name="bronze">%d Bronze</string>
+    <string name="silver">%d Silver</string>
+    <string name="gold">%d Gold</string>
+    <string name="age">Age : %d</string>
+    <string name="reputation">Reputation : %d</string>
+</resources>

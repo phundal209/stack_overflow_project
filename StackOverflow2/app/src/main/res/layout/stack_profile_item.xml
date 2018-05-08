@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileImage"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        tools:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        tools:text="Jon Skeet"
+        android:layout_toEndOf="@+id/profileImage"
+        android:layout_toRightOf="@+id/profileImage"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/age"
+        tools:text="Age : 41"
+        android:layout_toEndOf="@+id/profileImage"
+        android:layout_toRightOf="@+id/profileImage"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@+id/username"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/link"
+        android:layout_toEndOf="@+id/profileImage"
+        android:layout_toRightOf="@+id/profileImage"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@+id/age"
+        android:autoLink="web"
+        android:layout_toStartOf="@+id/reputationContainer"
+        tools:text="www.github.com/somethingreallyreallylong"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reputation"
+        android:layout_alignParentEnd="true"
+        tools:text="Reputation : 1024268"
+        android:layout_marginEnd="8dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reputation"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        android:id="@+id/reputationContainer">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bronzeRep"
+            tools:text="8207 Bronze"
+            android:textColor="@color/bronze"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/silverRep"
+            tools:text="7588 Silver"
+            android:textColor="@color/silver"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goldRep"
+            tools:text="629 Gold"
+            android:textColor="@color/gold"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/hintColor"
+        android:layout_below="@+id/reputationContainer"/>
+
+
+</RelativeLayout>
