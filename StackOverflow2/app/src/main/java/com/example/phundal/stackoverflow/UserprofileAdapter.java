@@ -17,6 +17,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
 
 public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.UserprofileViewHolder> {
@@ -50,7 +51,8 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
         }
         holder.link.setText(userProfileModel.getLink());
 
-        Picasso.get().load(userProfileModel.getProfile_image()).into(holder.profileImage);
+        Picasso.get().load(userProfileModel.getProfile_image())
+                .transform(new CropCircleTransformation()).into(holder.profileImage);
     }
 
     @Override
